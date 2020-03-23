@@ -22,7 +22,7 @@
             var $container = $(this);
 
             // only load reCAPTCHA if container is in viewport and 
-			// reCAPTCHA container is empty, this prevents double loading
+            // reCAPTCHA container is empty, this prevents double loading
             if (!$.trim($container.html()) && opts.isInViewport.call($container, opts)) {
                 
                 // async loading of reCAPTCHA library
@@ -56,7 +56,7 @@
    /* default values
     *
     * offset: Offset in pixel. A negative offset will trigger loading earlier, a postive value later.
-	* libraryUrl: URL to the Google reCAPTCHA library. If the default URL changes, it can be customized here.
+    * libraryUrl: URL to the Google reCAPTCHA library. If the default URL changes, it can be customized here.
     * spinner.remove: Defines whether a spinner should be removed automatically after load.
     * spinner.selector: CSS selector used to find the spinner container (starting at reCAPTCHA parent element). 
     * spinner.delay: Time in milliseconds waited before the spinner is removed.
@@ -70,7 +70,7 @@
     */
     $.fn.asyncReCAPTCHA.defaults = {
         offset: 0,
-		libraryUrl: 'https://www.google.com/recaptcha/api.js',
+        libraryUrl: 'https://www.google.com/recaptcha/api.js',
         spinner: {
             remove: false,
             selector: '.spinner-border',
