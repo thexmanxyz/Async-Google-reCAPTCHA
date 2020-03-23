@@ -5,9 +5,9 @@
 *   Purpose: This project contains a simple and       *
 *            full configurable jQuery plugin which    *
 *            asynchronously loads one or multiple     *
-*            Google reCAPTCHA instances located on a  *
-*            page. The load is triggered when the     *
-*            reCAPTCHA is scrolled into viewport.     *
+*            Google reCAPTCHA v2 instances located    *
+*            on a page. The load is triggered when    *
+*            the reCAPTCHA is scrolled into viewport. *
 *                                                     *
 *   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   *
 *   Repository: https://git.io/JvyqU                  *
@@ -61,7 +61,7 @@
     * spinner.selector: CSS selector used to find the spinner container (starting at reCAPTCHA parent element). 
     * spinner.delay: Time in milliseconds waited before the spinner is removed.
     * isInViewport: Custom function to determine if container is in viewport (callback).
-    * removeSpinner: Custom function to control and define the default spinner removal behavior (callback).
+    * removeSpinner: Custom function to define the spinner removal behavior (callback).
     * triggerAsyncLoad: Custom function to define when the reCAPTCHA should be loaded (callback).
     * checkAndLoad: Custom function which calls the async load and check routine (callback).
     * beforeLoad: Custom function called before the async load was initiated (callback).
