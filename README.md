@@ -1,4 +1,4 @@
-# Async reCAPTCHA
+# Async Google reCAPTCHA
 
 ## Prerequisites
 * Basic web frontend knowledge
