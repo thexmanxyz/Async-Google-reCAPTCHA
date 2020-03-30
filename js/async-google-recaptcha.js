@@ -25,7 +25,7 @@
 
             // only load reCAPTCHA if reCAPTCHA sub container not exists and 
             // container is in viewport, this prevents double loading
-            if ($container.children('div:not(.' + opts.spinner.spinnerClass + ')').length > 0
+            if ($container.children('div:not(.' + opts.spinner.spinnerClass + ')').length == 0
                     && opts.isInViewport.call($container, opts)) {
 
                 // callback before load initiated
