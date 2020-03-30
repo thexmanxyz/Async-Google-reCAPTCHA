@@ -1,0 +1,63 @@
+/******************************************************
+*                                                     *
+*   Async reCAPTCHA - jQuery Plugin                   *
+*                                                     *
+*   Purpose: This project contains a simple and       *
+*            full configurable jQuery plugin which    *
+*            asynchronously loads one or multiple     *
+*            Google reCAPTCHA v2 instances located    *
+*            on a page. The load is triggered when    *
+*            the reCAPTCHA is scrolled into viewport. *
+*                                                     *
+*   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   *
+*   Repository: https://git.io/JvyqU                  *
+*                                                     *
+******************************************************/
+
+$primary: #000 !default;
+
+/* apply styling on reCAPTCHA container to make it working with spinner */
+.g-recaptcha {
+  min-height: 78px;
+  display: inline-block;
+  position: relative;
+
+  > div:not(.async-recaptcha-spinner) {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+.async-recaptcha-spinner {
+
+  /* Default styles for centering spinner and built-in spinner */
+  position: absolute !important;
+  margin: auto !important;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  /* credits @ https://www.w3schools.com/howto/howto_css_loader.asp */
+  &.simple-spinner {
+    border: 0.25em solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 0.25em solid $primary;
+    width: 2rem;
+    height: 2rem;
+    -webkit-animation: simple-spin 0.75s linear infinite; /* Safari */
+    animation: simple-spin 0.75s linear infinite;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes simple-spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes simple-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
