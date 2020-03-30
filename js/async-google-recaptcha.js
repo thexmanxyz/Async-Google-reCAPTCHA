@@ -23,10 +23,9 @@
         $(opts.containers).each(function () {
             var $container = $(this);
 
-            // only load reCAPTCHA if reCAPTCHA sub container not exists and 
+            // only load reCAPTCHA if reCAPTCHA container is empty and 
             // container is in viewport, this prevents double loading
-            if ($container.children('div:not(.' + opts.spinner.spinnerClass + ')').length == 0
-                    && opts.isInViewport.call($container, opts)) {
+            if (!$.trim($(this).html()) && opts.isInViewport.call($container, opts)) {
 
                 // callback before load initiated
                 opts.beforeLoad.call($container, opts);
@@ -76,7 +75,8 @@
     *  - 'included': simple build-in CSS spinner
     *  - 'bootstrap': Bootstrap spinner, requires version >= 4.2
     *  - 'custom': any custom spinner or library
-    * spinner.spinnerClass: CSS class added to the spinner container or used for removal.
+    * spinner.spinnerClass: CSS class added to the actual spinner element within the spinner container.
+    * spinner.spinnerCtnClass: CSS class added to the spinner container or used for removal.
     * spinner.bsSpinnerClass: The Bootstrap spinner class. Either 'spinner-border' or 'spinner-grow'.
     * spinner.customSpinner: Any custom spinner container passed as HTML can be used here.
     * spinner.delay: Time in milliseconds waited before the spinner is removed.
@@ -99,6 +99,7 @@
             remove: false,
             type: 'included',
             spinnerClass: 'async-recaptcha-spinner',
+            spinnerCtnClass: 'async-recaptcha-spinner-ctn',
             bsSpinnerClass: 'spinner-border',
             customSpinner: '',
             delay: 10000
@@ -138,9 +139,9 @@
         // remove a predefined spinner from the container of reCAPTCHA - can be user customized
         removeSpinner: function(opts) {
 
-            // remove spinner within container
+            // remove spinner within parent container
             var hFunc = function() { 
-                $(this).find('.' + opts.spinner.spinnerClass).remove();
+                $(this).parent().find('.' + opts.spinner.spinnerCtnClass).remove();
             };
 
             // wait a specific time in milliseconds before removing spinner
@@ -150,7 +151,7 @@
         // attach a predefined spinner to the container of reCAPTCHA - can be user customized
         attachSpinner: function(opts) {
             var spinner = opts.spinner;
-            var $spinnerDiv;
+            var $spinnerDiv, $spinnerCtn;
 
             // if spinner should be attached
             if(spinner.attach) {
@@ -174,12 +175,13 @@
                     // create custom spinner
                     }else if (spinner.type == 'custom') {
 
-                        // create custom container by passed HTML
+                        // create custom spinner element by passed HTML
                         $spinnerDiv = $(spinner.customSpinner).addClass(spinner.spinnerClass);
                     }
 
-                    // prepend spinner container
-                    $(this).prepend($spinnerDiv);
+                    // create spinner container and prepend to parent container
+                    $spinnerCtn = $('<div>').addClass(spinner.spinnerCtnClass).prepend($spinnerDiv);
+                    $(this).parent().prepend($spinnerCtn);
                 });
             }
         },

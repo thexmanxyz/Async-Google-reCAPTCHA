@@ -19,13 +19,16 @@ $primary: #000 !default;
 /* apply styling on reCAPTCHA container to make it working with spinner */
 .g-recaptcha {
   min-height: 78px;
-  display: inline-block;
   position: relative;
+  z-index: 2;
+}
 
-  > div:not(.async-recaptcha-spinner) {
-    z-index: 2;
-    position: relative;
-  }
+/* Spinner container with same size as reCAPTCHA */
+.async-recaptcha-spinner-ctn {
+  min-height: 78px;
+  display: inline-block;
+  position: absolute;
+  min-width: 304px;
 }
 
 .async-recaptcha-spinner {
