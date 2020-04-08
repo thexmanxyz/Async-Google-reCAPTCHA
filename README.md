@@ -185,7 +185,7 @@ $('.g-recaptcha').asyncReCAPTCHA({
 });
 ```
 
-If you want a different appearance for the CSS-Loader spinners change `load1` to `load2` - `load8` or `load1-small` - `load8-small`. More information about the supported CSS-Loader spinners can be found [here](https://projects.lukehaas.me/css-loaders/). The following spinners are included:
+If you want a different appearance for the CSS-Loader spinners change `load1` to `load2` - `load8`. More information about the supported CSS-Loader spinners can be found [here](https://projects.lukehaas.me/css-loaders/). The following spinners are included:
 
 ```
 <div class="load1 loader">Loading...</div>
@@ -218,6 +218,8 @@ If you want a different appearance for the CSS-Loader spinners change `load1` to
 ```
 <div class="load8 loader">Loading...</div>
 ```
+
+All spinners have been resized to occupy ~32px in width in height. Feel free to change the size for your desired spinner appropriately.
 
 ### Layout Reflow
 
