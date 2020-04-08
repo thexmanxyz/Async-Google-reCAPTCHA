@@ -67,8 +67,8 @@
 /* circle */
 .async-recaptcha-spinner.lds-circle {
   display: inline-block;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   margin: 8px;
   border-radius: 50%;
   background: #000;
@@ -81,6 +81,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-default div {
   position: absolute;
@@ -156,6 +157,7 @@
   display: inline-block;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-dual-ring:after {
   content: " ";
@@ -175,6 +177,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-ellipsis div {
   position: absolute;
@@ -208,6 +211,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-facebook div {
   display: inline-block;
@@ -236,6 +240,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-grid div {
   position: absolute;
@@ -297,7 +302,7 @@
   position: relative;
   width: 80px;
   height: 80px;
-  transform: rotate(45deg);
+  transform: rotate(45deg) scale(0.5);
   transform-origin: 40px 40px;
 }
 .async-recaptcha-spinner.lds-heart div {
@@ -333,6 +338,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-hourglass:after {
   content: " ";
@@ -353,6 +359,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-ring div {
   box-sizing: border-box;
@@ -382,6 +389,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-ripple div {
   position: absolute;
@@ -400,6 +408,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.6);
 }
 .async-recaptcha-spinner.lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -479,6 +488,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+  transform: scale(0.5);
 }
 .async-recaptcha-spinner.lds-spinner div {
   transform-origin: 40px 40px;

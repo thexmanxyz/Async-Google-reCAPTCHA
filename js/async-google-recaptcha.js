@@ -81,7 +81,7 @@
     * spinner.customSpinner: Any custom spinner container passed as HTML can be used here.
     * spinner.delay: Time in milliseconds waited before the spinner is removed.
     * isInViewport: Custom function to determine if container is in viewport (callback).
-    * setHeight: Custom function that sets the min-height for the Google reCAPTCHA container (callback).
+    * setHeight: Custom function that sets min-height for the Google reCAPTCHA container (callback).
     * attachSpinner: Custom function to define the spinner attach behavior (callback).
     * removeSpinner: Custom function to define the spinner removal behavior (callback).
     * triggerAsyncLoad: Custom function to define when the reCAPTCHAs should be loaded (callback).

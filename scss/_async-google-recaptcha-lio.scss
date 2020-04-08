@@ -58,8 +58,8 @@ $primary: #000 !default;
   /* circle */
   &.lds-circle {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 32px;
+    height: 32px;
     margin: 8px;
     border-radius: 50%;
     background: $primary;
@@ -72,6 +72,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       position: absolute;
@@ -149,6 +150,7 @@ $primary: #000 !default;
     display: inline-block;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     &:after {
       content: " ";
@@ -169,6 +171,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       position: absolute;
@@ -204,6 +207,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       display: inline-block;
@@ -234,6 +238,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       position: absolute;
@@ -297,7 +302,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
-    transform: rotate(45deg);
+    transform: rotate(45deg) scale(0.5);
     transform-origin: 40px 40px;
 
     div {
@@ -335,6 +340,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       box-sizing: border-box;
@@ -366,6 +372,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     &:after {
       content: " ";
@@ -387,6 +394,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       position: absolute;
@@ -407,6 +415,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.6);
 
     div {
       animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -496,6 +505,7 @@ $primary: #000 !default;
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(0.5);
 
     div {
       transform-origin: 40px 40px;
