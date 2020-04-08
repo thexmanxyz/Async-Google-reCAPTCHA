@@ -112,63 +112,62 @@ $('.g-recaptcha').asyncReCAPTCHA({
 Please visit [Loading.io](https://loading.io/css/) to find out more about the `customSpinner` parameter with is used to define each of the supported spinners. The following spinners are included:
 
 **Circle:**
-
-```
+```HTML
 <div class="lds-circle"><div></div></div>
 ```
 
 **Dual Ring:**
-```
+```HTML
 <div class="lds-dual-ring"></div>
 ```
 
 **Facebook:**
-```
+```HTML
 <div class="lds-facebook"><div></div><div></div><div></div></div>
 ```
 
 **Heart:**
-```
+```HTML
 <div class="lds-heart"><div></div></div>
 ```
 
 **Ring:**
-```
+```HTML
 <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
 ```
 
 **Roller:**
-```
+```HTML
 <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 ```
 
 **Default:**
-```
+```HTML
 <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 ```
 
 **Ellipsis:**
-```
+```HTML
 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 ```
 
 **Grid:**
-```
+```HTML
 <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 ```
 
 **Hourglass:**
-```
+```HTML
 <div class="lds-hourglass"></div>
 ```
 
 **Ripple:**
-```
+```HTML
 <div class="lds-ripple"><div></div><div></div></div>
 ```
 
 **Spinner:**
-```
+```HTML
 <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 ```
 
@@ -187,35 +186,35 @@ $('.g-recaptcha').asyncReCAPTCHA({
 
 If you want a different appearance for the CSS-Loader spinners change `load1` to `load2` - `load8`. More information about the supported CSS-Loader spinners can be found [here](https://projects.lukehaas.me/css-loaders/). The following spinners are included:
 
-```
+```HTML
 <div class="load1 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load2 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load3 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load4 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load5 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load6 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load7 loader">Loading...</div>
 ```
 
-```
+```HTML
 <div class="load8 loader">Loading...</div>
 ```
 
