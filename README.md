@@ -22,7 +22,7 @@ This project contains a simple and full configurable jQuery plugin which asynchr
    <link href="css/async-google-recaptcha.min.css" rel="stylesheet">
    ```
    * **SCSS:** if you want to use SCSS instead, only necessary for spinner
-       * `_async_google-recaptcha-scss` for simple included spinner
+       * `_async_google-recaptcha.scss` for simple included spinner
        * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners
        * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
        * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint
