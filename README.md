@@ -9,17 +9,36 @@ This project contains a simple and full configurable jQuery plugin which asynchr
 1. [Download v1.1.0](https://github.com/thexmanxyz/Async-Google-reCAPTCHA/archive/v1.1.0.zip) of Async Google reCAPTCHA
 2. Extract the files and copy them to your website folder
 3. Define the CSS and JS resource files in your HTML page. You can also place the `<script>` tag after your `<body>` content. Basic resource import example:
-   * **JS:** `<script src="js/async-google-recaptcha.min.js"></script>`
-   * **CSS:** `<link href="css/async-google-recaptcha.min.css" rel="stylesheet">` (only necessary for spinner)
+   * **JS:**
+   ```HTML
+   <script src="js/async-google-recaptcha.min.js"></script>
+   ```
+   * **CSS:** only necessary for spinner
+       * `async-google-recaptcha-min.css` for simple included spinner
        * `async-google-recaptcha-lio.min.css` for [Loading.io](https://loading.io/css/) pure CSS spinners
        * `async-google-recaptcha-cl.min.css` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
        * `async-google-recaptcha-all.min.css` includes all spinners but bigger footsprint
-   * **SCSS:** if you want to use SCSS instead `@import 'async-google-recaptcha.scss';` (only necessary for spinner)
+   ```HTML
+   <link href="css/async-google-recaptcha.min.css" rel="stylesheet">
+   ```
+   * **SCSS:** if you want to use SCSS instead, only necessary for spinner
+       * `_async_google-recaptcha-scss` for simple included spinner
        * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners
        * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
        * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint
-4. Initialize the plugin with basic values as follows
-   * **Plugin Initialization:** `$('.g-recaptcha').asyncReCAPTCHA({});` or `jQuery('.g-recaptcha').asyncReCAPTCHA({});`
+   ```SCSS
+   @import 'async-google-recaptcha.scss';
+   ```
+4. Initialize the plugin with basic values as follows:
+   ```JS
+   $('.g-recaptcha').asyncReCAPTCHA({});
+   ```
+
+   or
+
+   ```JS
+   jQuery('.g-recaptcha').asyncReCAPTCHA({});
+   ```
 5. If you want to further customize the appearance or behavior please take a closer look on the plugin parameters and their explanation listed in the next section.
 
 ## Configuration and Parameters
