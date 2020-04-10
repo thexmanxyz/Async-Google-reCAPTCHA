@@ -83,6 +83,12 @@ To make this plugin working for your Google reCAPTCHA please OMIT the default re
 <script src='https://www.google.com/recaptcha/api.js'></script>
 ```
 
+But DON'T FORGET to add the following HTML markup:
+
+```HTML
+<div class="g-recaptcha" data-sitekey="{YOUR_SITEKEY}"></div>
+```
+
 When your use case requires to use the API parameters `onload` or `explicit` please change the `libraryUrl` appropriately. E.g. to `https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit`.
 
 ### Using Spinners / Examples
