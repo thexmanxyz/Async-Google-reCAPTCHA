@@ -14,18 +14,10 @@ This project contains a simple and full configurable jQuery plugin which asynchr
    <script src="js/async-google-recaptcha.min.js"></script>
    ```
    * **CSS:** only necessary for spinner
-       * `async-google-recaptcha-min.css` for simple included spinner
-       * `async-google-recaptcha-lio.min.css` for [Loading.io](https://loading.io/css/) pure CSS spinners
-       * `async-google-recaptcha-cl.min.css` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
-       * `async-google-recaptcha-all.min.css` includes all spinners but bigger footsprint
    ```HTML
    <link href="css/async-google-recaptcha.min.css" rel="stylesheet">
    ```
    * **SCSS:** if you want to use SCSS instead, only necessary for spinner
-       * `_async_google-recaptcha.scss` for simple included spinner
-       * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners
-       * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
-       * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint
    ```SCSS
    @import 'async-google-recaptcha.scss';
    ```
@@ -40,6 +32,21 @@ This project contains a simple and full configurable jQuery plugin which asynchr
    jQuery('.g-recaptcha').asyncReCAPTCHA({});
    ```
 5. If you want to further customize the appearance or behavior please take a closer look on the plugin parameters and their explanation listed in the next section.
+
+## Resource Configuration
+Please mind the following stylesheets resources and their explanation when you want to adjust the spinner type. This influences the footprint of your site but you can also omit the `<link>` tag completely if you don't need a spinner.
+
+   * **CSS:**
+       * `async-google-recaptcha-min.css` for simple included spinner
+       * `async-google-recaptcha-lio.min.css` for [Loading.io](https://loading.io/css/) pure CSS spinners
+       * `async-google-recaptcha-cl.min.css` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
+       * `async-google-recaptcha-all.min.css` includes all spinners but bigger footsprint
+       
+   * **SCSS:**
+       * `_async_google-recaptcha.scss` for simple included spinner
+       * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners
+       * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
+       * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint
 
 ## Configuration and Parameters
 The plugin can be easily configured during the initialization and the following parameters are currently available. The listing contains the parameters together with their default values.
