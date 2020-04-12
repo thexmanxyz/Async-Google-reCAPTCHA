@@ -80,14 +80,14 @@
     * spinner.bsSpinnerClass: The Bootstrap spinner class. Either 'spinner-border' or 'spinner-grow'.
     * spinner.customSpinner: Any custom spinner container passed as HTML can be used here.
     * spinner.delay: Time in milliseconds waited before the spinner is removed.
-    * isInViewport: Custom function to determine if container is in viewport (callback).
-    * setHeight: Custom function that sets min-height for the Google reCAPTCHA container (callback).
-    * attachSpinner: Custom function to define the spinner attach behavior (callback).
-    * removeSpinner: Custom function to define the spinner removal behavior (callback).
-    * triggerAsyncLoad: Custom function to define when the reCAPTCHAs should be loaded (callback).
-    * checkAndLoad: Custom function which calls the async load and check routine (callback).
-    * beforeLoad: Custom function called before the async load was initiated (callback).
-    * afterLoad: Custom function called after the async load was initiated (callback).
+    * isInViewport: Function to determine if container is in viewport (callback).
+    * setHeight: Function that sets min-height for the Google reCAPTCHA container (callback).
+    * attachSpinner: Function to define the spinner attach behavior (callback).
+    * removeSpinner: Function to define the spinner removal behavior (callback).
+    * triggerAsyncLoad: Function to define when the reCAPTCHAs should be loaded (callback).
+    * checkAndLoad: Function which calls the async load and check routine (callback).
+    * beforeLoad:Function called before the async load was initiated (callback).
+    * afterLoad: Function called after the async load was initiated (callback).
     *
     */
     $.fn.asyncReCAPTCHA.defaults = {
