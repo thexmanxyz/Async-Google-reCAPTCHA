@@ -6,7 +6,7 @@ This project contains a simple and full configurable jQuery plugin which asynchr
 * jQuery core library
 
 ## Download / Installation
-1. [Download v1.1.0](https://github.com/thexmanxyz/Async-Google-reCAPTCHA/archive/v1.1.0.zip) of Async Google reCAPTCHA
+1. [Download v1.2.0](https://github.com/thexmanxyz/Async-Google-reCAPTCHA/archive/v1.2.0.zip) of Async Google reCAPTCHA
 2. Extract the files and copy them to your website folder
 3. Define the CSS and JS resource files in your HTML page. You can also place the `<script>` tag after your `<body>` content. Basic resource import example:
    * **JS:**
