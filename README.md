@@ -66,14 +66,14 @@ The plugin can be easily configured during the initialization and the following 
     - `bsSpinnerClass: 'spinner-border',` | The Bootstrap spinner class. Either `'spinner-border'` or `'spinner-grow'`.
     - `customSpinner: '',` | Any custom spinner container passed as HTML can be used here.
     - `delay: 10000},` | Time in milliseconds waited before the spinner is removed.
-- `isInViewport: function(opts){ ... },` | Function to determine if container is in viewport (callback).
-- `setHeight: function(opts){ ... },` | Function that sets `min-height` for the Google reCAPTCHA container (callback).
-- `attachSpinner: function(opts) { ... },` | Function to define the spinner attach behavior (callback).
-- `removeSpinner: function(opts){ ... },` | Function to define the spinner removal behavior (callback).
-- `triggerAsyncLoad: function(opts){ ... },` | Function to define when the reCAPTCHA should be loaded (callback).
-- `checkAndLoad: function(opts){ ... },` | Function which calls the async load and check routine (callback).
-- `beforeLoad: function(opts){ ... },` | Function called before the async load was initiated (callback).
-- `afterLoad: function(opts){ ... }` | Function called after the async load was initiated (callback).
+- `isInViewport: function(){ ... },` | Function to determine if container is in viewport (callback).
+- `setHeight: function(){ ... },` | Function that sets `min-height` for the Google reCAPTCHA container (callback).
+- `attachSpinner: function() { ... },` | Function to define the spinner attach behavior (callback).
+- `removeSpinner: function(){ ... },` | Function to define the spinner removal behavior (callback).
+- `triggerAsyncLoad: function(){ ... },` | Function to define when the reCAPTCHA should be loaded (callback).
+- `checkAndLoad: function(){ ... },` | Function which calls the async load and check routine (callback).
+- `beforeLoad: function(){ ... },` | Function called before the async load was initiated (callback).
+- `afterLoad: function(){ ... }` | Function called after the async load was initiated (callback).
 
 ### Google ReCHAPTCHA Loading
 

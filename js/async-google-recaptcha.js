@@ -16,52 +16,55 @@
 
 (function( $ ) {
 
+    // all configurations
+    var config;
+
     // retrieve all reCAPTCHA container(s), check and execute async load
-    function checkAndLoadReCAPTCHA(opts) {
+    function checkAndLoadReCAPTCHA() {
 
         // iterate over all reCAPTCHA containers
-        $(opts.containers).each(function () {
+        $(config.containers).each(function () {
             var $container = $(this);
 
             // only load reCAPTCHA if reCAPTCHA container is empty and 
             // container is in viewport, this prevents double loading
-            if (!$.trim($(this).html()) && opts.isInViewport.call($container, opts)) {
+            if (!$.trim($(this).html()) && config.isInViewport.call($container)) {
 
                 // callback before load initiated
-                opts.beforeLoad.call($container, opts);
+                config.beforeLoad.call($container);
 
                 // async loading of reCAPTCHA library
-                jQuery.getScript(opts.libraryUrl);
+                jQuery.getScript(config.libraryUrl);
 
                 // remove a predefined spinner if enabled
-                if(opts.spinner.remove) {
-                    opts.removeSpinner.call($container, opts);
+                if(config.spinner.remove) {
+                    config.removeSpinner.call($container);
                 }
 
                 // callback after load initiated
-                opts.afterLoad.call($container, opts);
+                config.afterLoad.call($container);
             }
        });
     }
 
     // initialize plugin and create events(s)
     $.fn.asyncReCAPTCHA = function(options) {
-        var opts = $.extend(true, {}, $.fn.asyncReCAPTCHA.defaults, options);
+        config = $.extend(true, {}, $.fn.asyncReCAPTCHA.defaults, options);
 
         // set containers containing reCAPTCHA
-        opts.containers = this;
+        config.containers = this;
 
         // attach inline min-height
-        opts.setHeight(opts);
+        config.setHeight();
 
         // attach spinner if necessary
-        opts.attachSpinner(opts);
+        config.attachSpinner();
 
         // add trigger event (scroll, resize)
-        opts.triggerAsyncLoad(opts);
+        config.triggerAsyncLoad();
 
         // initial check, if already in viewport
-        opts.checkAndLoad(opts); 
+        config.checkAndLoad(); 
     };
 
    /* default values
@@ -105,9 +108,9 @@
             delay: 10000
         },
 
-        // determine if container is in viewport - can be user customized
+        // determine if container is in viewport
         // credits @ https://stackoverflow.com/a/33979503/2379196
-        isInViewport: function (opts) {
+        isInViewport: function () {
 
             // container bounds
             var containerTop = $(this).offset().top;
@@ -118,17 +121,17 @@
             var viewportBottom = viewportTop + $(window).height();
 
             // detect if container is in viewport
-            return containerBottom > viewportTop && containerTop + opts.offset < viewportBottom;
+            return containerBottom > viewportTop && containerTop + config.offset < viewportBottom;
         },
 
-        // automatically attach inline min-height to prevent reflow - can be user customized
-        setHeight: function(opts) {
+        // automatically attach inline min-height to prevent reflow
+        setHeight: function() {
 
             // only if height should be fixed inline
-            if(opts.fixHeight) {
+            if(config.fixHeight) {
 
                 // iterate over all reCAPTCHA containers
-                $(opts.containers).each(function () {
+                $(config.containers).each(function () {
                     
                     // apply default height of 78px
                     $(this).attr('style', 'min-height:78px;');
@@ -136,28 +139,28 @@
             }
         },
 
-        // remove a predefined spinner from the container of reCAPTCHA - can be user customized
-        removeSpinner: function(opts) {
+        // remove a predefined spinner from the container of reCAPTCHA
+        removeSpinner: function() {
 
             // remove spinner within parent container
             var hFunc = function() { 
-                $(this).parent().find('.' + opts.spinner.spinnerCtnClass).remove();
+                $(this).parent().find('.' + config.spinner.spinnerCtnClass).remove();
             };
 
             // wait a specific time in milliseconds before removing spinner
-            setTimeout(hFunc.bind(this), opts.spinner.delay);
+            setTimeout(hFunc.bind(this), config.spinner.delay);
         },
 
-        // attach a predefined spinner to the container of reCAPTCHA - can be user customized
-        attachSpinner: function(opts) {
-            var spinner = opts.spinner;
+        // attach a predefined spinner to the container of reCAPTCHA
+        attachSpinner: function() {
+            var spinner = config.spinner;
             var $spinnerDiv, $spinnerCtn;
 
             // if spinner should be attached
             if(spinner.attach) {
 
                 // iterate over all reCAPTCHA containers
-                $(opts.containers).each(function () {
+                $(config.containers).each(function () {
 
                     // create bootstrap spinner
                     if(spinner.type == 'bootstrap') {
@@ -186,19 +189,19 @@
             }
         },
 
-        // append trigger event - can be user customized
-        triggerAsyncLoad: function (opts) {
-            $(window).on('resize scroll', function() { opts.checkAndLoad(opts) });
+        // append trigger event
+        triggerAsyncLoad: function () {
+            $(window).on('resize scroll', function() { config.checkAndLoad() });
         },
 
-        // check and load reCAPTCHA(s) - can be user customized
-        checkAndLoad: function(opts) { checkAndLoadReCAPTCHA(opts) },
+        // check and load reCAPTCHA(s)
+        checkAndLoad: function() { checkAndLoadReCAPTCHA() },
 
-        // before load initiated - can be user customized
-        beforeLoad: function(opts) {},
+        // before load initiated
+        beforeLoad: function() {},
 
-        // after load initiated - can be user customized
-        afterLoad: function(opts) {}
+        // after load initiated
+        afterLoad: function() {}
     };
 
 })( jQuery );
