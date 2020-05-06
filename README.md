@@ -9,15 +9,15 @@ This project contains a simple and full configurable jQuery plugin which asynchr
 1. [Download v1.2.0](https://github.com/thexmanxyz/Async-Google-reCAPTCHA/archive/v1.2.0.zip) of Async Google reCAPTCHA
 2. Extract the files and copy them to your website folder
 3. Define the CSS and JS resource files in your HTML page. You can also place the `<script>` tag after your `<body>` content. Basic resource import example:
-   * **JS:**
+   * **JS (< 3kB):**
    ```HTML
    <script src="js/async-google-recaptcha.min.js"></script>
    ```
-   * **CSS:** only necessary for spinner
+   * **CSS (< 2kB):** only necessary for spinner
    ```HTML
    <link href="css/async-google-recaptcha.min.css" rel="stylesheet">
    ```
-   * **SCSS:** if you want to use SCSS instead, only necessary for spinner
+   * **SCSS (< 2kB):** if you want to use SCSS instead, only necessary for spinner
    ```SCSS
    @import 'async-google-recaptcha.scss';
    ```
@@ -67,7 +67,7 @@ The plugin can be easily configured during the initialization and the following 
     - `customSpinner: '',` | Any custom spinner container passed as HTML can be used here.
     - `delay: 10000},` | Time in milliseconds waited before the spinner is removed.
 - `isInViewport: function(){ ... },` | Determins if container is in viewport.
-- `isRecaptchaLoaded:function(){ ... },` | Determines if the Google reCAPTCHA `<script>` tag exists.
+- `isRecaptchaLoaded: function(){ ... },` | Determines if the Google reCAPTCHA `<script>` tag exists.
 - `setHeight: function(){ ... },` | Sets `min-height` for the Google reCAPTCHA container.
 - `attachSpinner: function() { ... },` | Defines the spinner attach behavior.
 - `removeSpinner: function(){ ... },` | Defines the spinner removal behavior.
