@@ -37,13 +37,13 @@ This project contains a simple and full configurable jQuery plugin which asynchr
 Please mind the following stylesheets resources and their explanation when you want to adjust the spinner type. This influences the footprint of your site but you can also omit the `<link>` tag completely if you don't need a spinner.
 
    * **CSS:**
-       * `async-google-recaptcha-min.css` for simple included spinner
+       * `async-google-recaptcha.min.css` for simple included spinner (< 2kB)
        * `async-google-recaptcha-lio.min.css` for [Loading.io](https://loading.io/css/) pure CSS spinners
        * `async-google-recaptcha-cl.min.css` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
        * `async-google-recaptcha-all.min.css` includes all spinners but bigger footsprint
        
    * **SCSS:**
-       * `_async_google-recaptcha.scss` for simple included spinner
+       * `_async_google-recaptcha.scss` for simple included spinner (< 2kB)
        * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners
        * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
        * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint
@@ -66,14 +66,14 @@ The plugin can be easily configured during the initialization and the following 
     - `bsSpinnerClass: 'spinner-border',` | The Bootstrap spinner class. Either `'spinner-border'` or `'spinner-grow'`.
     - `customSpinner: '',` | Any custom spinner container passed as HTML can be used here.
     - `delay: 10000},` | Time in milliseconds waited before the spinner is removed.
-- `isInViewport: function(){ ... },` | Function to determine if container is in viewport (callback).
-- `setHeight: function(){ ... },` | Function that sets `min-height` for the Google reCAPTCHA container (callback).
-- `attachSpinner: function() { ... },` | Function to define the spinner attach behavior (callback).
-- `removeSpinner: function(){ ... },` | Function to define the spinner removal behavior (callback).
-- `triggerAsyncLoad: function(){ ... },` | Function to define when the reCAPTCHA should be loaded (callback).
-- `checkAndLoad: function(){ ... },` | Function which calls the async load and check routine (callback).
-- `beforeLoad: function(){ ... },` | Function called before the async load was initiated (callback).
-- `afterLoad: function(){ ... }` | Function called after the async load was initiated (callback).
+- `isInViewport: function(){ ... },` | Determins if container is in viewport.
+- `setHeight: function(){ ... },` | Sets `min-height` for the Google reCAPTCHA container.
+- `attachSpinner: function() { ... },` | Defines the spinner attach behavior.
+- `removeSpinner: function(){ ... },` | Defines the spinner removal behavior.
+- `triggerAsyncLoad: function(){ ... },` | Defines when the reCAPTCHA should be loaded.
+- `checkAndLoad: function(){ ... },` | Calls the async load and check routine.
+- `beforeLoad: function(){ ... },` | Called before the async load was initiated.
+- `afterLoad: function(){ ... }` | Called after the async load was initiated.
 
 ### Google ReCHAPTCHA Loading
 
@@ -91,7 +91,7 @@ But DON'T FORGET to add the following HTML markup:
 
 When your use case requires to use the API parameters `onload` or `explicit` please change the `libraryUrl` appropriately. E.g. to `https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit`.
 
-### Using Spinners / Examples
+### Examples
 
 The following example shows how you can specify plugin parameters to change the default offset and remove a pre-defined spinner.
 
@@ -114,6 +114,8 @@ $('.g-recaptcha').asyncReCAPTCHA({
   }
 });
 ```
+
+### Advanced Spinner Usage
 
 If you want to use a Bootstrap 4 spinner, configure the plugin with the following parameters:
 
