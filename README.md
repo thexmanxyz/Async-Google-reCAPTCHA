@@ -67,6 +67,7 @@ The plugin can be easily configured during the initialization and the following 
     - `customSpinner: '',` | Any custom spinner container passed as HTML can be used here.
     - `delay: 10000},` | Time in milliseconds waited before the spinner is removed.
 - `isInViewport: function(){ ... },` | Determins if container is in viewport.
+- `isRecaptchaLoaded:function(){ ... },` | Determines if the Google reCAPTCHA `<script>` tag exists.
 - `setHeight: function(){ ... },` | Sets `min-height` for the Google reCAPTCHA container.
 - `attachSpinner: function() { ... },` | Defines the spinner attach behavior.
 - `removeSpinner: function(){ ... },` | Defines the spinner removal behavior.

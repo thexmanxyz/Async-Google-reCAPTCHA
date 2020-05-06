@@ -26,9 +26,10 @@
         $(config.containers).each(function () {
             var $container = $(this);
 
-            // only load reCAPTCHA if reCAPTCHA container is empty and 
-            // container is in viewport, this prevents double loading
-            if (!$.trim($(this).html()) && config.isInViewport.call($container)) {
+            // only load reCAPTCHA if reCAPTCHA container is empty, 
+            // container is in viewport and script not loaded, to prevent double loading.
+            if (!$.trim($(this).html()) && config.isInViewport.call($container)
+                    && !config.isRecaptchaLoaded()) {
 
                 // callback before load initiated
                 config.beforeLoad.call($container);
@@ -84,6 +85,7 @@
     * spinner.customSpinner: Any custom spinner container passed as HTML can be used here.
     * spinner.delay: Time in milliseconds waited before the spinner is removed.
     * isInViewport: Determines if container is in viewport.
+    * isRecaptchaLoaded: Determines if the Google reCAPTCHA <script> tag exists.
     * setHeight: Sets min-height for the Google reCAPTCHA container.
     * attachSpinner: Defines the spinner attach behavior.
     * removeSpinner: Defines the spinner removal behavior.
@@ -124,16 +126,27 @@
             return containerBottom > viewportTop && containerTop + config.offset < viewportBottom;
         },
 
+        // check if reCAPTCHA script tag exists
+        // credits @ https://stackoverflow.com/a/18155447/2379196
+        isRecaptchaLoaded: function (){
+            var scripts = document.getElementsByTagName("script");
+            for(var i = 0; i < scripts.length; i++) {
+                var srcAttr = scripts[i].getAttribute('src');
+                if(srcAttr != null && srcAttr.startsWith(config.libraryUrl)) {
+                    return true;
+                }
+            }
+            return false; 
+        },
+
         // automatically attach inline min-height to prevent reflow
         setHeight: function() {
 
             // only if height should be fixed inline
             if(config.fixHeight) {
 
-                // iterate over all reCAPTCHA containers
+                // apply default height to prevent reflow
                 $(config.containers).each(function () {
-                    
-                    // apply default height of 78px
                     $(this).attr('style', 'min-height:78px;');
                 });
             }
