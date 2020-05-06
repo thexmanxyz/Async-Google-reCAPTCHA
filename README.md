@@ -38,15 +38,15 @@ Please mind the following stylesheets resources and their explanation when you w
 
    * **CSS:**
        * `async-google-recaptcha.min.css` for simple included spinner (< 2kB)
-       * `async-google-recaptcha-lio.min.css` for [Loading.io](https://loading.io/css/) pure CSS spinners
-       * `async-google-recaptcha-cl.min.css` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
-       * `async-google-recaptcha-all.min.css` includes all spinners but bigger footsprint
+       * `async-google-recaptcha-lio.min.css` for [Loading.io](https://loading.io/css/) pure CSS spinners (~ 16kB)
+       * `async-google-recaptcha-cl.min.css` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners (< 21kB)
+       * `async-google-recaptcha-all.min.css` includes all spinners but bigger footsprint (< 35kB)
        
    * **SCSS:**
        * `_async_google-recaptcha.scss` for simple included spinner (< 2kB)
-       * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners
-       * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners
-       * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint
+       * `_async-google-recaptcha-lio.scss` for [Loading.io](https://loading.io/css/) pure CSS spinners (~ 16kB)
+       * `_async-google-recaptcha-cl.scss` for [CSS-Loader](https://projects.lukehaas.me/css-loaders/) pure CSS spinners (< 21kB)
+       * `_async-google-recaptcha-all.scss` includes all spinners but bigger footsprint (< 35kB)
 
 ## Configuration and Parameters
 The plugin can be easily configured during the initialization and the following parameters are currently available. The listing contains the parameters together with their default values.
