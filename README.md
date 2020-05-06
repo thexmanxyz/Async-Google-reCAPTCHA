@@ -77,7 +77,6 @@ The plugin can be easily configured during the initialization and the following 
 - `afterLoad: function(){ ... }` | Called after the async load was initiated.
 
 ### Google ReCHAPTCHA Loading
-
 To make this plugin working for your Google reCAPTCHA please OMIT the default reCAPTCHA `<script>` tag e.g.:
 
 ```HTML
@@ -93,7 +92,6 @@ But DON'T FORGET to add the following HTML markup:
 When your use case requires to use the API parameters `onload` or `explicit` please change the `libraryUrl` appropriately. E.g. to `https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit`.
 
 ### Examples
-
 The following example shows how you can specify plugin parameters to change the default offset and remove a pre-defined spinner.
 
 ```Javascript
@@ -117,7 +115,6 @@ $('.g-recaptcha').asyncReCAPTCHA({
 ```
 
 ### Advanced Spinner Usage
-
 If you want to use a Bootstrap 4 spinner, configure the plugin with the following parameters:
 
 ```Javascript
@@ -256,7 +253,6 @@ If you want a different appearance for the CSS-Loader spinners change `load1` to
 All spinners have been resized to occupy ~32px in width in height. Feel free to change the size for your desired spinner appropriately.
 
 ### Layout Reflow
-
 If you load content and elements asynchronously please be aware that it is necessary to reserve space for the Google reCAPTCHA container. This is necessary to prevent container resizing which leads to a unpleasant rearrangement of the page layout during loading. To counter this drawback please use the following plugin configuration:
 
 ```JS
@@ -272,7 +268,6 @@ or take a look at the following CSS which works fine with the Google reCAPTCHA v
 ```
 
 ## Features
-
 * load Google reCAPTCHA asynchronously to get better Google PageSpeed Insights rating
 * offset to load Google reCAPTCHA at the desired scroll position
 * full-fledged spinner configuration used as placeholder while reCAPTCHA loads
@@ -298,7 +293,6 @@ None
 * [Loading.io CSS-Spinner](https://loading.io/css/)
 
 ## Credits
-
 Thanks to the jQuery team for this [great plugin tutorial](https://learn.jquery.com/plugins/basic-plugin-creation/).
 
 Thanks to [Loading.io](https://loading.io) for providing a fancy [set of spinners](https://github.com/loadingio/css-spinner/).
